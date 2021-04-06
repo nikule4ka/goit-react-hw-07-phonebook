@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "name": "Evgeniy Alexandrovich",
+      "number": "0963128358",
+      "id": 2
+    },
+    {
+      "name": "Anna Alexandrovna",
+      "number": "0962254344",
+      "id": 3
+    },
+    {
+      "name": "Julia Nikolaevna",
+      "number": "0978664455",
+      "id": 4
+    },
+    {
+      "name": "Anastasia Olegovna",
+      "number": "0972584433",
+      "id": 5
+    },
+    {
+      "name": "Valeria Vladimirovna",
+      "number": "0953492277",
+      "id": 6
+    },
+    {
+      "name": "Nika",
+      "number": "970754244",
+      "id": 7
+    }
+  ]
+}
