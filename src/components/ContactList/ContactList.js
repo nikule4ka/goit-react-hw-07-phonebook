@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+import * as contactsOperations from '../../redux/contacts/contacts-operations';
+import {
+  getIsLoading,
+  getVisibleContacts,
+} from '../../redux/contacts/contacts-selectors';
+
 import Loader from 'react-loader-spinner';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import * as contactsOperations from '../../redux/contacts/contacts-operations';
+
 import s from './ContactList.module.css';
 
 class ContactList extends Component {
@@ -53,10 +60,12 @@ ContactList.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  isLoading: state.contacts.loading,
+  contacts: getVisibleContacts(state),
+  isLoading: getIsLoading(state),
 });
 
 const mapDispatchToProps = dispatch => ({
+  onDeleteContacts: id => dispatch(contactsOperations.deleteContact(id)),
   fetchContacts: () => dispatch(contactsOperations.fetchContacts()),
 });
 
